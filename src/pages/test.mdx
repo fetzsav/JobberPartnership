@@ -9,7 +9,21 @@ import Image from 'next/image'
         <div id="header" style={{ marginBottom: '20px', marginTop: '60px' }}>
             <Image src="/images/logo.png" width={165} height={165} alt="Fetz.dev Logo"/>
             # Fetzer's Fleet Managment
-            #### Proudly powered by <span style={{ marginLeft: '8px', display: 'inline-block', verticalAlign: 'middle', paddingBottom: '5px', backgroundImage: 'url(/images/jobber.svg)', backgroundRepeat: 'no-repeat', backgroundSize: 'contain', width: '150px', height: '25px' }}/>
+            #### Proudly powered by <span className="jobber-logo" style={{ marginLeft: '8px', display: 'inline-block', verticalAlign: 'middle', paddingBottom: '5px', backgroundRepeat: 'no-repeat', backgroundSize: 'contain', width: '150px', height: '25px' }}/>
         </div>
     </div>
+
+    <style jsx>
+{`
+    .jobber-logo {
+        background-image: url('/images/jobber_black.svg');
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .jobber-logo {
+            background-image: url('/images/jobber_white.svg');
+        }
+    }
+`}
+</style>
 {/* )} */}
