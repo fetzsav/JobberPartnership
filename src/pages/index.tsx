@@ -1,13 +1,23 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
+// import { fDevLogo } from "../components/images.tsx"
+import fdev_logo from "../images/fdev_logo.png"
+
+
 
 const pageStyles = {
   color: "#232129",
   padding: 96,
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  height: "100vh",
+  flexDirection: "column" as "column", // Ensures content stacks vertically
 }
+
 const headingStyles = {
-  marginTop: 0,
+  marginTop: 250,
   marginBottom: 64,
   maxWidth: 320,
 }
@@ -136,17 +146,29 @@ const links = [
   },
 ]
 
+              
+
 const IndexPage: React.FC<PageProps> = () => {
   return (
+    
     <main style={pageStyles}>
+      <img
+        src={fdev_logo}
+        alt="Fetz.Dev Logo"
+        style={{ borderRadius: "8px", marginBottom: "24px", width: "20%", height: "20%" }}
+        />
       <h1 style={headingStyles}>
-        Congratulations
+        Fetzer's Field Service Management
         <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! 🎉🎉🎉</span>
+        <span style={headingAccentStyles}>— Proudly powered by Jobber🎉🎉🎉</span>
       </h1>
+      <img
+        src={fdev_logo}
+        alt="Fetz.Dev Logo"
+        style={{ borderRadius: "8px", marginBottom: "24px", width: "10%", height: "auto" }}
+        />
       <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.tsx</code> to see this page
-        update in real-time. 😎
+      😎😎
       </p>
       <ul style={doclistStyles}>
         {docLinks.map(doc => (
