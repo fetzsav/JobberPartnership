@@ -2,17 +2,19 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import Link from "next/link";
 // import Lander from "@test.mdx";
-import LandingMDX from "../pages/test.mdx";
+import LandingPage from "./components/landing/landingold";
 
 export default function Home() {
   return (
     <div className={styles.page}>
+
       <main className={styles.main}>
-        {/* <Lander /> */}
-        <LandingMDX/>
-        <Link href="/test" className={styles.card}> View Test Page</Link>
+
+
+      <LandingPage/>
+
       </main>
-      <footer className={styles.footer}>
+      {/* <footer className={styles.footer}>
         <a href="https://getjobber.com/fetzer">
           <Image
             src="/images/jobber.svg"
@@ -23,7 +25,8 @@ export default function Home() {
             priority
           />
         </a>
-      </footer>
+      </footer> */}
+
     </div>
   );
 }

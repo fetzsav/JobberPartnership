@@ -1,0 +1,26 @@
+import Image from 'next/image';
+
+
+    <div id="header" style={{display: 'flex', flexDirection: 'column', marginTop: '30px', justifyContent: 'center', alignItems: 'center'}}>
+        <Image src="/images/logo.png" width={200} height={200} style={{paddingBottom: "1.5rem"}} alt="Fetz.dev Logo" />
+        <h1> Fetzer's Fleet Managment </h1>
+    </div>
+    <div style={{ marginTop: '10px' }}>
+        ### Proudly powered by <span className="jobber-logo" style={{ marginLeft: '8px', display: 'inline-block', verticalAlign: 'middle', paddingBottom: '5px', backgroundRepeat: 'no-repeat', backgroundSize: 'contain', width: '150px', height: '25px' }} />
+    </div>
+
+
+
+<style jsx>
+{`
+    .jobber-logo {
+        background-image: url('/images/jobber_black.svg');
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .jobber-logo {
+            background-image: url('/images/jobber_white.svg');
+        }
+    }
+`}
+</style>

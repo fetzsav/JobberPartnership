@@ -1,9 +1,16 @@
 import Image from 'next/image'
 
+export const LandingPage = (
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100vh', textAlign: 'center' }}>
+        <Header />
+        <div style={{ marginTop: '20px' }}>
+            <h1>Fleet Management</h1>
+            <p>Manage your fleet with ease and efficiency.</p>
+        </div>
+    </div>
+);
 
-
-{/* // export default function Lander() {
-// return ( */}
+export const Header = (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100vh', textAlign: 'center' }}>
         
         <div id="header" style={{ marginTop: '30px' }}>
@@ -14,7 +21,6 @@ import Image from 'next/image'
             #### Proudly powered by <span className="jobber-logo" style={{ marginLeft: '8px', display: 'inline-block', verticalAlign: 'middle', paddingBottom: '5px', backgroundRepeat: 'no-repeat', backgroundSize: 'contain', width: '150px', height: '25px' }}/>
         </div>
     </div>
-
     <style jsx>
 {`
     .jobber-logo {
@@ -28,4 +34,4 @@ import Image from 'next/image'
     }
 `}
 </style>
-{/* )} */}
+);
