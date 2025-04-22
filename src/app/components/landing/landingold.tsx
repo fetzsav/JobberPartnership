@@ -86,7 +86,7 @@ const Fetz3 = () => {
         >
           <div
             className="h-8 flex items-center justify-center bg-primary/10 rounded-full mb-6"
-            style={{ marginBottom: '0.5em', marginTop:"1em" }} // Adjusted margin for better spacing`
+            style={{ marginBottom: "0.5em", marginTop:"1em" }} // Adjusted margin for better spacing`
           >
             {/* Changed icon to represent code/customization */}
             <i className="ri-code-s-slash-line ri-xl text-primary"></i>
@@ -173,11 +173,11 @@ const ThreeRow = () => { return (
       {/* Column 3: Dedicated Support */}
       <div
         className="shadow-md p-8 rounded-lg flex flex-col items-center text-center"
-        style={{ backgroundColor: '#1f1f1f', paddingBottom:'1rem' }} // Light gray background
+        style={{ backgroundColor: "#1f1f1f", paddingBottom:"1rem" }} // Light gray background
       >
         <div
           className="h-8 flex items-center justify-center bg-primary/10 rounded-full mb-6"
-          style={{ marginBottom: '0.5em', marginTop:"1em" }} // Adjusted margin for better spacing`
+          style={{ marginBottom: "0.5em", marginTop:"1em" }} // Adjusted margin for better spacing`
         >
           {/* Changed icon to represent support */}
           <i className="ri-customer-service-2-line ri-xl text-primary"></i>
