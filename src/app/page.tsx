@@ -9,7 +9,10 @@ export default function Home() {
     <div className={styles.page}>
 
       <main className={styles.main}>
-
+      <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+        />
 
       <LandingPage/>
 
