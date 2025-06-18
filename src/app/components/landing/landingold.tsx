@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Header from './header.mdx'
+import Button from '@mui/material/Button';
 // import Catch from './catch.mdx'
 
 
@@ -13,6 +14,7 @@ const LandingPage  = () => {
         <div style={{ width: '25%', height: '1px', backgroundColor: 'white', margin: '10px 0' }} />
         <div style={{ marginTop: '1em'}}/>
         <Fetz3 />
+        <CallToAction/>
         {/* <Catch /> */}
         <div style={{ marginTop: '6em'}}/>
         <JobberRows/>
@@ -33,6 +35,15 @@ const LandingPage  = () => {
 
 //     );
 // }
+
+const CallToAction = () => { 
+  return (
+    <div>
+      <Button variant="outlined" color="success">Contact for Inquiry</Button>
+      {/* <button type="button">Contact for Inquiry</button> */}
+    </div>
+  )
+}
 
 const Fetz3 = () => {
     return (
@@ -272,9 +283,20 @@ const JobberRows = () => { return (
             <h3 className="heading text-l font-semibold mb-3">
                 Invoicing & Payments
             </h3>
+            <div style={{ display: 'flex', flexDirection: 'column',  justifyContent: 'start' }}>
             <p>
                 Get paid faster with online payments and streamlined invoicing features.
             </p>
+              <Image
+                    src="/images/invoicing.png"
+                    alt="Jobber Logo"
+                    className="logo"
+                    width={550}
+                    height={390}
+                    priority
+                    style={{ marginBottom: '0.5em', marginRight: '0em' }}
+                />
+            </div>
             </div>
 
             {/* Column 3: CRM & Mobile App */}
@@ -289,21 +311,32 @@ const JobberRows = () => { return (
                 <i className="ri-smartphone-line ri-xl text-primary"></i>
             </div>
             <h3 className="heading text-l font-semibold mb-3">
-                CRM & Mobile App
+                Full Integration
             </h3>
-            <div style={{ display: 'flex', flexDirection: 'row',  justifyContent: 'start' }}>
+            <div style={{ display: 'flex', flexDirection: 'column',  justifyContent: 'start' }}>
                 <p className='text-left' style={{ marginLeft: '2em', marginTop: '2em'}}>
-                    Keep track of all your client details and manage your business on the go with Jobber&apos;s mobile app.
+                    Full integration with your existing applications
                 </p>
-                {/* <Image
-                    src="/images/mobile.webp"
-                    alt="Jobber Logo"
-                    className="logo"
-                    width={230}
-                    height={253}
-                    priority
-                    style={{ marginTop: '2em', marginBottom: '0.5em', marginRight: '2em' }}
-                /> */}
+                <div style={{ display: 'flex', flexDirection: 'row',  justifyContent: 'start' }}>
+                  <Image
+                      src="/images/quickbooks.png"
+                      alt="Jobber Logo"
+                      className="logo"
+                      width={230}
+                      height={253}
+                      priority
+                      style={{ marginTop: '2em', marginBottom: '0.5em', marginRight: '2em' }}
+                  />
+                  <Image
+                      src="/images/zapier.png"
+                      alt="Jobber Logo"
+                      className="logo"
+                      width={230}
+                      height={253}
+                      priority
+                      style={{ marginTop: '2em', marginBottom: '0.5em', marginRight: '2em' }}
+                  />
+                </div>
             </div>
             </div>
         </div>
