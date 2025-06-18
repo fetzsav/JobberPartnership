@@ -1,6 +1,11 @@
+'use client'
 import Image from 'next/image'
 import Header from './header.mdx'
 import Button from '@mui/material/Button';
+import Modal from '@mui/material/Modal';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import React from 'react';
 // import Catch from './catch.mdx'
 
 
@@ -37,10 +42,61 @@ const LandingPage  = () => {
 // }
 
 const CallToAction = () => { 
+  let [contactModal, setContactModal] = React.useState(false);
+  let handleClose = () => {
+    setContactModal(!contactModal)
+  }
+  const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'grey',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+  borderRadius: 2
+};
   return (
     <div>
-      <Button variant="outlined" color="success">Contact for Inquiry</Button>
-      {/* <button type="button">Contact for Inquiry</button> */}
+      <Button size="large" color="success" variant='outlined' onClick={handleClose}>Contact / Inquire</Button>
+      <Modal
+        open={contactModal}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+
+          <Typography id="modal-modal-description" variant="h4" component="h4">
+            Email
+          </Typography>
+          <Typography id="modal-modal-description" sx={{ mt: 1, fotnsize: 35, fontWeight: "bold" }}>
+          contact@fetzersolutions.com
+          </Typography>
+          <Typography id="modal-modal-description" variant="h4" component="h4">
+            Cell
+          </Typography>
+          <Typography id="modal-modal-description" sx={{ mt: 1, fotnsize: 35, fontWeight: "bold" }}>
+          +1 (912)-310-7650
+          </Typography>
+                    <Typography id="modal-modal-description" variant="h6" component="h6" sx={{pl: 4, fontSize: 15}}>
+            <li>
+              (Call / Text)
+            </li>
+          </Typography>
+
+
+
+          <Typography id="modal-modal-description" variant="h5" component="h5" sx={{mt: 3, fontStyle:"italic"}}>
+            Contact Form
+          </Typography>
+          <Typography id="modal-modal-description" sx={{ pl: 0.5, fontsize: 35, fontStyle:"italic"}}>
+          (coming soon)
+          </Typography>
+        </Box>
+      </Modal>
     </div>
   )
 }
